@@ -62,7 +62,6 @@ const consultasMedicas = [
       "ISAPRE",
     ],
   },
-
   {
     // sector: ["dental"],
     hora: ["8:30", "11:00", "11:30", "13:00", "13:30", "14:00"],
@@ -96,10 +95,6 @@ const consultasMedicas = [
 
 const sectores = ["radiologia", "traumatologia", "dental"];
 
-console.log(
-  `Primera atencion:\nSector: ${consultasMedicas[0].sector}\nHora: ${consultasMedicas[0].hora[0]}\nEspecialista: ${consultasMedicas[0].especialista[0]}\nPaciente: ${consultasMedicas[0].paciente[0]}\nRut: ${consultasMedicas[0].rut[0]}\nPrevision: ${consultasMedicas[0].prevision[0]}`
-);
-
 // FUNCIONES
 
 // obtengo el sector a consultar
@@ -128,24 +123,12 @@ function creator() {
   let div = document.createElement("div");
   let p1 = document.createElement("p");
   let p2 = document.createElement("p");
-  let p3 = document.createElement("p");
-  let p4 = document.createElement("p");
-  let p5 = document.createElement("p");
-  let p6 = document.createElement("p");
 
   // agrega los elementos con su id al DOM
   body.append(p1);
   p1.id = "parr1";
   body.append(p2);
   p2.id = "parr2";
-  body.append(p3);
-  p3.id = "parr3";
-  body.append(p4);
-  p4.id = "parr4";
-  body.append(p5);
-  p5.id = "parr5";
-  body.append(p6);
-  p6.id = "parr6";
 }
 
 // tratamiento de datos
@@ -153,10 +136,6 @@ function procesoDatos(sector) {
   creator();
   let parraf1 = document.getElementById("parr1");
   let parraf2 = document.getElementById("parr2");
-  let parraf3 = document.getElementById("parr3");
-  let parraf4 = document.getElementById("parr4");
-  let parraf5 = document.getElementById("parr5");
-  let parraf6 = document.getElementById("parr6");
 
   if (sector == 0) {
     parraf1.innerText = `Sector: ${sectores[0]}\n\nPrimera atencion:\nHora: ${consultasMedicas[0].hora[0]}\nEspecialista: ${consultasMedicas[0].especialista[0]}\nPaciente: ${consultasMedicas[0].paciente[0]}\nRut: ${consultasMedicas[0].rut[0]}\nPrevision: ${consultasMedicas[0].prevision[0]}`;
